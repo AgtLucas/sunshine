@@ -68,12 +68,15 @@ public class MainActivity extends Activity {
 
             String[] forecastArray = {
                     "Today - Sunny -  15/23",
-                    "Tomorrow - Rainy -  15/23",
+                    "Tomorrow - Heavy Rain -  15/23",
                     "Weds - Cloudy -  04/10",
                     "Thurs - Sunny -  20/30",
                     "Fry - Heavy Rain -  -10/4",
                     "Sat - Foggy -  12/32",
-                    "Sun - Sunny -  08/22"
+                    "Sun - Sunny -  08/22",
+                    "Mon - Sunny -  06/22",
+                    "Tue - Frozen -  -10/08",
+                    "Weds - Cloudy -  04/10"
             };
 
             List<String> weekForecast = new ArrayList<String>(Arrays.asList(forecastArray));
