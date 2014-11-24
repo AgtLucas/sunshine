@@ -13,6 +13,8 @@ import android.os.Build;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.io.BufferedReader;
+import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -91,6 +93,9 @@ public class MainActivity extends Activity {
 
             ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
             listView.setAdapter(forecastAdapter);
+
+            HttpURLConnection urlConnection = null;
+            BufferedReader reader = null;
 
             return rootView;
         }
