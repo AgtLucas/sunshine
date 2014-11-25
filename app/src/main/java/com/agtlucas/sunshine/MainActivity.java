@@ -104,6 +104,8 @@ public class MainActivity extends Activity {
             try {
                 URL url = new URL("http://api.openweathermap.org/data/2.5/forecast/daily?q=94043&mode=json&units=metric&cnt=7");
 
+                urlConnection = (HttpURLConnection) url.openConnection();
+
             } catch (IOException e) {
 
             } finally {
