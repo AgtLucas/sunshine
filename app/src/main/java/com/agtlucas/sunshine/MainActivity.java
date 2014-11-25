@@ -110,6 +110,11 @@ public class MainActivity extends Activity {
                 urlConnection.connect();
 
                 InputStream inputStream = urlConnection.getInputStream();
+                StringBuffer stringBuffer = new StringBuffer();
+
+                if (inputStream == null) {
+                    return null;
+                }
 
             } catch (IOException e) {
 
