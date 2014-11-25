@@ -15,6 +15,7 @@ import android.widget.ListView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
@@ -107,6 +108,8 @@ public class MainActivity extends Activity {
                 urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setRequestMethod("GET");
                 urlConnection.connect();
+
+                InputStream inputStream = urlConnection.getInputStream();
 
             } catch (IOException e) {
 
