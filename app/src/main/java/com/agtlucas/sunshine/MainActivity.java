@@ -16,6 +16,7 @@ import android.widget.ListView;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -101,6 +102,7 @@ public class MainActivity extends Activity {
             String forecastJsonStr = null;
 
             try {
+                URL url = new URL("http://api.openweathermap.org/data/2.5/forecast/daily?q=94043&mode=json&units=metric&cnt=7");
 
             } catch (IOException e) {
 
