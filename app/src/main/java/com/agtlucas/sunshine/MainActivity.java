@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -129,10 +130,23 @@ public class MainActivity extends Activity {
                     return null;
                 }
 
+                forecastJsonStr = buffer.toString();
+
             } catch (IOException e) {
+                Log.e("PlaceholderFragment", "Error", e);
 
+                return null;
             } finally {
-
+                if (urlConnection != null) {
+                    urlConnection.disconnect();
+                }
+                if (reader != null) {
+                    try {
+                        reader.close();
+                    } catch (final Exception e) {
+                        Log.e("PlaceholderFragment", "Error closing stream", e);
+                    }
+                }
             }
 
             return rootView;
