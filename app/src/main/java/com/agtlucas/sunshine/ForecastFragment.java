@@ -101,7 +101,7 @@ public class ForecastFragment extends Fragment {
                 if (buffer.length() == 0) {
                     return null;
                 }
-
+                // TODO: Check this
                 forecastJsonStr = buffer.toString();
 
             } catch (IOException e) {
